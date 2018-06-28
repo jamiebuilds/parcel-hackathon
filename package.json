@@ -7,8 +7,13 @@
   "author": "Jamie Kyle <me@thejameskyle.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel src -dD lib",
+    "build": "bolt workspaces exec -- babel src -d lib",
     "prepublish": "yarn build"
+  },
+  "bolt": {
+    "workspaces": [
+      "src/*/*"
+    ]
   },
   "devDependencies": {
     "ava": "^0.25.0",
