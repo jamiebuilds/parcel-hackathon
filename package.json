@@ -7,13 +7,10 @@
   "author": "Jamie Kyle <me@thejameskyle.com>",
   "license": "MIT",
   "scripts": {
-    "build": "bolt workspaces exec -- babel src -d lib",
-    "prepublish": "yarn build"
+    "build": "bolt workspaces exec -- babel src -d lib"
   },
   "bolt": {
-    "workspaces": [
-      "src/*/*"
-    ]
+    "workspaces": ["src/*/*"]
   },
   "devDependencies": {
     "ava": "^0.25.0",
@@ -27,8 +24,10 @@
     "prettier": "^1.13.7"
   },
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "commander": "^2.15.1",
     "glob": "^7.1.2",
+    "js-yaml": "^3.10.0",
     "micromatch": "^3.1.10",
     "node-libs-browser": "^2.1.0",
     "p-queue": "^2.4.2"
