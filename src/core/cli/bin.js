@@ -1,2 +1,8 @@
 #!/usr/bin/env node
-require('./lib/cli').default(process.cwd(), process.argv.slice(2));
+var cli = require('./lib/cli');
+var cwd = process.cwd();
+var argv = process.argv;
+
+cli.default(cwd, argv).catch(function(err) {
+  console.log(String(err));
+});

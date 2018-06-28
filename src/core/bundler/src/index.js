@@ -10,7 +10,7 @@ export default async function bundle(opts: Opts) {
     // ...
   });
 
-  await bundler.bundle();
+  // await bundler.bundle();
 
   // ...
 }
