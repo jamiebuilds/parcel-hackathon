@@ -1,0 +1,17 @@
+{
+  "name": "@parcel/resolver",
+  "version": "0.0.0",
+  "main": "src/Resolver.js",
+  "dependencies": {
+    "@parcel/fs": "^0.0.0",
+    "glob": "^7.1.2",
+    "micromatch": "^3.1.10",
+    "node-libs-browser": "^2.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
