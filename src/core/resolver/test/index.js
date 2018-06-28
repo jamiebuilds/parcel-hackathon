@@ -88,14 +88,7 @@ describe('resolver', function() {
       );
       assert.equal(
         resolved.path,
-        path.join(
-          __dirname,
-          '..',
-          'node_modules',
-          'browserify-zlib',
-          'lib',
-          'index.js'
-        )
+        require.resolve('browserify-zlib')
       );
     });
 
@@ -103,7 +96,7 @@ describe('resolver', function() {
       let resolved = await resolver.resolve('fs', path.join(rootDir, 'foo.js'));
       assert.equal(
         resolved.path,
-        path.join(__dirname, '..', 'src', 'builtins', '_empty.js')
+        path.join(__dirname, '..', 'src', '_empty.js')
       );
     });
   });
@@ -392,7 +385,7 @@ describe('resolver', function() {
       );
       assert.equal(
         resolved.path,
-        path.join(__dirname, '..', 'src', 'builtins', '_empty.js')
+        path.join(__dirname, '..', 'src', '_empty.js')
       );
       assert.equal(resolved.pkg.name, 'package-browser-exclude');
     });
@@ -404,7 +397,7 @@ describe('resolver', function() {
       );
       assert.equal(
         resolved.path,
-        path.join(__dirname, '..', 'src', 'builtins', '_empty.js')
+        path.join(__dirname, '..', 'src', '_empty.js')
       );
       assert.equal(resolved.pkg.name, 'package-alias-exclude');
     });
