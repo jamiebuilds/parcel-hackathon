@@ -7,7 +7,8 @@
   "author": "Jamie Kyle <me@thejameskyle.com>",
   "license": "MIT",
   "scripts": {
-    "build": "bolt workspaces exec -- babel src -d lib",
+    "src": "bolt workspaces exec -- mkdir -p src",
+    "build": "bolt src && bolt workspaces exec -- babel src -d lib",
     "cli": "./src/core/cli/bin.js"
   },
   "bolt": {
